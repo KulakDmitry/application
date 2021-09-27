@@ -44,10 +44,6 @@ function renderDelButton() {
 }
 
 function eventDelAnswer() {
-  const answerBlock = document.querySelector("#answer");
-
-  answerBlock.classList.add("animation-answer-delete");
-
   this.parentNode.remove();
 }
 
