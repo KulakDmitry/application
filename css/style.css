@@ -1,0 +1,199 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: antiquewhite;
+  text-align: center;
+}
+
+.answer {
+  width: 45%;
+  text-align: center;
+  color: rgb(41, 48, 45);
+  margin: auto auto 15px auto;
+  padding: 30px 0 10px;
+  border-radius: 20px;
+  animation-duration: 0.2s;
+  animation-fill-mode: both;
+}
+
+#answer-list {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.animation-answer {
+  animation-name: fadeInDown;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.animation-answer-delete {
+  animation-name: delete;
+}
+
+@keyframes delete {
+  from {
+    display: block;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    display: none;
+    transform: translate3d(0, -100%, 0);
+    transform: none;
+  }
+}
+
+.main-input-form {
+  text-align: center;
+  border-bottom: 1px solid rgb(27, 27, 26);
+  padding: 10px;
+  margin: 25px 40px 0px 40px;
+}
+
+.main-input-form input {
+  padding: 10px 0;
+  font-size: 15px;
+}
+
+.main-input-form label {
+  padding-left: 30px;
+  font-size: 20px;
+}
+
+#btn-check,
+#btn-clear {
+  display: inline-block;
+  margin: 20px 15px;
+  padding: 15px 40px;
+  border: 1px solid gray;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: all 0.1s ease-in-out;
+}
+
+#btn-check:hover,
+#btn-clear:hover {
+  color: white;
+  background-color: gray;
+}
+
+.no-valid {
+  border: 3px solid red;
+  border-radius: 8px;
+}
+
+.reset-form {
+  border-radius: 0px;
+}
+
+.error-message {
+  color: red;
+  font-size: 25px;
+}
+
+.del-btn {
+  display: block;
+  margin-left: 90%;
+  background-color: rgb(225, 5, 5);
+  border: 1px solid black;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+
+.del-btn:hover {
+  color: white;
+  border: 1px solid white;
+  scale: 1.4;
+}
+
+.input-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media screen and (max-width: 500px) {
+  .del-btn {
+    margin-left: 75%;
+    margin-bottom: 10%;
+  }
+
+  .main-input-form {
+    margin: 25px 40px 40px 40px;
+  }
+
+  .answer {
+    width: 75%;
+  }
+
+  .app-calc {
+    display: none;
+  }
+}
+@media screen and (min-width: 500px) {
+  .header-block {
+    position: fixed;
+  }
+
+  #answer-list {
+    padding-top: 320px;
+  }
+}
+
+.calculator-btn {
+  background: url(../pictures/calc-btn.svg);
+  background-size: 50px;
+  position: absolute;
+  top: 15px;
+  right: 50px;
+  padding: 25px;
+}
+
+.calculator-btn:hover {
+  background: url(../pictures/calc-btn-hover.svg);
+  background-size: 50px;
+  cursor: pointer;
+}
+
+.calc-btn-active {
+  background: url(../pictures/calc-btn-hover.svg);
+  background-size: 50px;
+  cursor: pointer;
+}
+
+.calc-btn-active:hover {
+  background: url(../pictures/calc-btn.svg);
+  background-size: 50px;
+  cursor: pointer;
+}
+
+.header {
+  position: relative;
+  margin-top: 20px;
+}
+
+.title {
+  display: inline-block;
+}
+
+.header-block {
+  width: 100%;
+  z-index: 1;
+  background-color: antiquewhite;
+}
